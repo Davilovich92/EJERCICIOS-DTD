@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concesionarios [
+<!ELEMENT concesionarios (concesionario)+>
+<!ELEMENT concesionario (datos_contacto , vehiculos)>
+<!ELEMENT datos_contacto (nombre , direccion , poblacion , telefono+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT poblacion (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT vehiculos (vehiculo)+>
+<!ELEMENT vehiculo (modelo , cilindrada , color , asegurado?)>
+<!ATTLIST vehiculo matricula CDATA #REQUIRED>
+<!ATTLIST vehiculo tipo (turismo | furgoneta) "turismo">
+<!ATTLIST vehiculo combustible (Gasolina | Diesel) #REQUIRED>
+<!ELEMENT modelo (#PCDATA)>
+<!ELEMENT cilindrada (#PCDATA)>
+<!ELEMENT color (#PCDATA)>
+<!ELEMENT asegurado EMPTY>
+]>
+<concesionarios>
+  <concesionario>
+    <datos_contacto>
+      <nombre>Madrimotor s.a.</nombre>
+      <direccion>Segadores, 114</direccion>
+      <poblacion>Madridejos</poblacion>
+      <telefono>925776655</telefono>
+      <telefono>660003366</telefono>
+    </datos_contacto>
+    <vehiculos>
+      <vehiculo matricula="BZS3467" tipo="turismo" combustible="Gasolina">
+        <modelo>Ibiza</modelo>
+        <cilindrada>1900</cilindrada>
+        <color>blanco</color>
+        <asegurado/>
+      </vehiculo>
+      <vehiculo matricula="CSW2860" tipo="furgoneta" combustible="Diesel">
+        <modelo>Leon</modelo>
+        <cilindrada>1900</cilindrada>
+        <color>blanco</color>
+      </vehiculo>
+    </vehiculos>
+  </concesionario>
+  <concesionario>
+    <datos_contacto>
+      <nombre>Albamotor S:L</nombre>
+      <direccion>Curtidores, 11</direccion>
+      <poblacion>Albacete</poblacion>
+      <telefono>96898765</telefono>
+      <telefono>660003786</telefono>
+    </datos_contacto>
+    <vehiculos>
+      <vehiculo matricula="AZS3768" tipo="furgoneta" combustible="Diesel">
+        <modelo>Altea</modelo>
+        <cilindrada>2400</cilindrada>
+        <color>negro</color>
+        <asegurado/>
+      </vehiculo>
+    </vehiculos>
+  </concesionario>
+</concesionarios>
